@@ -1,0 +1,65 @@
+:root {
+  --font-family-1: "Barlow", sans-serif;
+  --font-family-2: "Fraunces", sans-serif;
+
+  //
+  --color-primary-soft-red: hsl(7, 99%, 70%);
+  --color-primary-yellow: hsl(51, 100%, 49%);
+
+  //graphic design text
+  --color-primary-dark-desaturated-cyan: hsl(167, 40%, 24%);
+
+  //photography text
+  --color-primary-dark-blue: hsl(198, 62%, 26%);
+
+  //footer
+  --color-primary-dark-moderate-cyan: hsl(168, 34%, 41%);
+
+  /////
+  --color-secondary-very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --color-secondary-very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --color-secondary-dark-grayish-blue: hsl(232, 10%, 55%);
+  --color-secondary-grayish-blue: hsl(210, 4%, 67%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+  scroll-behavior: smooth; // ПЛАВНАЯ ПРОКРУТКА
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family-1);
+  font-weight: 600;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  height: 100%;
+  width: 144rem;
+
+  display: grid;
+  grid-template-rows: 100vh repeat(3, 60rem) 80vh 50vh 40vh;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1080px) {
+    width: 375px;
+
+    grid-template-rows: 60rem 35rem 40rem 35rem 40rem 60rem 60rem 100rem 35rem 30rem;
+    grid-template-columns: 100%;
+  }
+}
